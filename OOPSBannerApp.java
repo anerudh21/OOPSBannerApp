@@ -1,14 +1,25 @@
 /**
- * OOPSBannerApp UC1 - OOPS Banner Display Application
+ * OOPSBannerApp UC2 - OOPS Banner Display Application
  * This class demonstrates a simple Java program that uses
  * the datatype String and prints it.
  *
  * @author Developer
- * @version 1.0
+ * @version 2.0
  */
-class OOPSBannerApp {
+
+public class OOPSBannerApp {
+
+    // Main method to run the banner display
     public static void main(String[] args) {
-        String s = "OOPS";
-        System.out.println(s);
+        // Print each line of the OOPS banner to create the visual effect
+        // Each line corresponds to a row in the banner for the letters O, O, P, S
+
+        System.out.println("  ***  " + " " + "  ***  " + " " + "****  " + " " + "******");
+        System.out.println("**   **" + " " + "**   **" + " " + "**  **" + " " + "**    ");
+        System.out.println("**   **" + " " + "**   **" + " " + "**  **" + " " + "**    ");
+	System.out.println("**   **" + " " + "**   **" + " " + "**  **" + " " + "******");
+        System.out.println("**   **" + " " + "**   **" + " " + "****  " + " " + "    **");
+        System.out.println("**   **" + " " + "**   **" + " " + "**    " + " " + "    **");
+        System.out.println("  ***  " + " " + "  ***  " + " " + "**    " + " " + "******");
     }
 }
