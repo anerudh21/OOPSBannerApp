@@ -1,72 +1,75 @@
 /**
- * OOPSBannerApp
- * <p>
- * This program displays the word "OOPS" as a banner using a modular approach.
- * Each letter is represented by a String array pattern, and the main method
- * assembles them line by line to form the banner.
- * </p>
+ * OOPSBannerApp UC7-OOPS Banner Display Application
+ * This class demonstrates a simple Java program that prints "OOPS"
+ * using inner classes and modular methods for each letter.
+ * Each letter is defined separately, and the banner is assembled line by line.
  *
  * @author Developer
- * @version 6.0
+ * @version 7.0
  */
-public class OOPSBannerApp {
 
-    // Method to generate the pattern for the letter 'O'
-    public static String[] getOPattern() {
-        return new String[]{
-            "  ***  ",
-            "**   **",
-            "**   **",
-			"**   **",
-			"**   **",
-			"**   **",
-            "  ***  "
-        };
-    }
+class OOPSBannerApp {
+	
+    public static class PrintOOPS {
 
-    // Method to generate the pattern for the letter 'P'
-    public static String[] getPPattern() {
-        return new String[]{
-            "****  ",
-            "**  **",
-			"**  **",
-			"**  **",
-            "****  ",
-            "**    ",
-            "**    "
-        };
-    }
-
-    // Method to generate the pattern for the letter 'S'
-    public static String[] getSPattern() {
-        return new String[]{
-            "******",
-            "**    ",
-			"**    ",
-            "******",
-            "    **",
-			"    **",
-            "******"
-        };
-    }
-
-    // Main method to run the banner display
-    public static void main(String[] args) {
-
-        // Declare String Arrays to hold patterns for each letter
-        String[] oPattern = getOPattern();
-        String[] pPattern = getPPattern();
-        String[] sPattern = getSPattern();
-
-        // Use the loop to assemble each line of the banner to create
-        // the visual effect for the message "OOPS"
-        for (int i = 0; i < oPattern.length; i++) {
-            System.out.println(
-                oPattern[i] + "  " + // First O
-                oPattern[i] + "  " + // Second O
-                pPattern[i] + "  " + // P
-                sPattern[i]          // S
-            );
+        // Pattern for letter O
+        private static String[] print_O() {
+            return new String[]{
+                "  ***  ",
+                "**   **",
+                "**   **",
+                "**   **",
+                "**   **",
+                "**   **",
+                "  ***  "
+            };
         }
+
+        // Pattern for letter P 
+        private static String[] print_P() {
+            return new String[]{
+                "*****  ",
+                "**   **",
+                "**   **",
+                "*****  ",
+                "**     ",
+                "**     ",
+                "**     "
+            };
+        }
+
+        // Pattern for letter S
+        private static String[] print_S() {
+            return new String[]{
+                "******",
+                "**    ",
+                "**    ",
+                "******",
+                "    **",
+                "    **",
+                "******"
+            };
+        }
+
+        // Method to print the OOPS banner
+        public static void print_out_OOPS() {
+            String[] letter_O = print_O();
+            String[] letter_P = print_P();
+            String[] letter_S = print_S();
+
+            // Loop through each line and print letters side by side
+            for (int i = 0; i < letter_O.length; i++) {
+                System.out.print(letter_O[i] + " ");
+                System.out.print(letter_O[i] + " ");
+                System.out.print(letter_P[i] + " ");
+                System.out.println(letter_S[i]);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create object and call print method
+        OOPSBannerApp.PrintOOPS the_print = new OOPSBannerApp.PrintOOPS();
+        the_print.print_out_OOPS();
     }
 }
