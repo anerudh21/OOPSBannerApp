@@ -1,8 +1,14 @@
 /**
+ * OOPSBannerApp
+ * <p>
+ * This program displays the word "OOPS" as a banner using a modular approach.
+ * Each letter is represented by a String array pattern, and the main method
+ * assembles them line by line to form the banner.
+ * </p>
+ *
  * @author Developer
  * @version 6.0
  */
-
 public class OOPSBannerApp {
 
     // Method to generate the pattern for the letter 'O'
